@@ -84,7 +84,8 @@ _install_os_packages:
 	python3 -m pip install --upgrade --user cfn-lint
 	curl -LO https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
 	unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
-	sudo ./sam-installation/install --update
+	./sam-installation/install --update
+	sam --version
 	npm -g install aws-cdk
 
 define HELP_MESSAGE
