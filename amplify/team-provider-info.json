@@ -1,4 +1,22 @@
 {
+  "devr": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsserverlessairline-devr-184825-authRole",
+      "UnauthRoleArn": "arn:aws:iam::366815547085:role/amplify-awsserverlessairline-devr-184825-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::366815547085:role/amplify-awsserverlessairline-devr-184825-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-awsserverlessairline-devr-184825-deployment",
+      "UnauthRoleName": "amplify-awsserverlessairline-devr-184825-unauthRole",
+      "StackName": "amplify-awsserverlessairline-devr-184825",
+      "StackId": "arn:aws:cloudformation:ca-central-1:366815547085:stack/amplify-awsserverlessairline-devr-184825/7326a010-ca48-11ec-b53b-02188703ef7e",
+      "AmplifyAppId": "d2z9hr004c1ghc"
+    },
+    "categories": {
+      "auth": {
+        "awsserverlessairline44ea6421": {}
+      }
+    }
+  },
   "devn": {
     "awscloudformation": {
       "AuthRoleName": "amplify-aws-serverless-airline-booking-devn-183915-authRole",

@@ -1,20 +1,19 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2017",
-        "jsx": "preserve",
-        "checkJs": true
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
     },
-    "include": [
-        "src/**/*.js",
-        "src/**/*.vue"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/node_modules/*",
-        "docs",
-        "amplify",
-        "public",
-        "src/styles"
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
     ]
+  }
 }
