@@ -85,6 +85,8 @@ _install_os_packages:
 	curl -LO https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
 	unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
 	./sam-installation/install --update
+	$(info [*] Checking some versions...)
+	python3 --version
 	sam --version
 	npm -g install aws-cdk
 
