@@ -58,6 +58,7 @@ deploy: ##=> Deploy booking service using SAM
 	sam package \
 		--s3-bucket $${DEPLOYMENT_BUCKET_NAME} \
 		--output-template-file packaged.yaml && \
+		--no-fail-on-empty-changeset \
 	aws cloudformation deploy \
 		--template-file packaged.yaml \
 		--stack-name $${STACK_NAME}-booking-$${AWS_BRANCH} \
@@ -69,7 +70,7 @@ deploy: ##=> Deploy booking service using SAM
 			RefundPaymentFunction=/$${AWS_BRANCH}/service/payment/function/refund \
 			AppsyncApiId=/$${AWS_BRANCH}/service/amplify/api/id \
 			Stage=$${AWS_BRANCH} \
-			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn
+			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn \
 		--no-fail-on-empty-changeset
 
 delete: ##=> Delete booking service
