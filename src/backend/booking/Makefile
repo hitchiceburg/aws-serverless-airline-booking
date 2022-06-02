@@ -70,6 +70,7 @@ deploy: ##=> Deploy booking service using SAM
 			AppsyncApiId=/$${AWS_BRANCH}/service/amplify/api/id \
 			Stage=$${AWS_BRANCH} \
 			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn
+		--no-fail-on-empty-changeset
 
 delete: ##=> Delete booking service
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-booking-$${AWS_BRANCH}

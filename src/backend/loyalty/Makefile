@@ -13,6 +13,7 @@ deploy: ##=> Deploy loyalty service using SAM and TypeScript build
 			BookingSNSTopic=/$${AWS_BRANCH}/service/booking/messaging/bookingTopic \
 			Stage=$${AWS_BRANCH} \
 			AppsyncApiId=$${GRAPHQL_API_ID}
+		--no-fail-on-empty-changeset
 
 delete: ##=> Delete booking service
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-loyalty-$${AWS_BRANCH}
