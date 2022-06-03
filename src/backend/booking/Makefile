@@ -69,7 +69,7 @@ deploy: ##=> Deploy booking service using SAM
 			RefundPaymentFunction=/$${AWS_BRANCH}/service/payment/function/refund \
 			AppsyncApiId=/$${AWS_BRANCH}/service/amplify/api/id \
 			Stage=$${AWS_BRANCH} \
-			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn \
+			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn 
 
 delete: ##=> Delete booking service
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-booking-$${AWS_BRANCH}
