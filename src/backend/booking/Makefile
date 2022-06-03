@@ -58,7 +58,6 @@ deploy: ##=> Deploy booking service using SAM
 	sam package \
 		--s3-bucket $${DEPLOYMENT_BUCKET_NAME} \
 		--output-template-file packaged.yaml && \
-		--no-fail-on-empty-changeset \
 	aws cloudformation deploy \
 		--template-file packaged.yaml \
 		--stack-name $${STACK_NAME}-booking-$${AWS_BRANCH} \
