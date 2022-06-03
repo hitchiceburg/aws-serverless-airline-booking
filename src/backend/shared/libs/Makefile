@@ -4,7 +4,7 @@ deploy: ##=> Deploy shared Lambda Layers using SAM
 	sam package \
 		--s3-bucket $${DEPLOYMENT_BUCKET_NAME} \
 		--output-template-file packaged.yaml && \
-		--no-confirm-changeset --no-fail-on-empty-changeset \
+		--no-fail-on-empty-changeset \
 	sam deploy \
 		--template-file packaged.yaml \
 		--stack-name $${STACK_NAME}-shared-layers-$${AWS_BRANCH} \

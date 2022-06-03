@@ -48,7 +48,7 @@ deploy: ##=> Deploy payment service using SAM
 		--template-file packaged.yaml \
 		--stack-name $${STACK_NAME}-payment-$${AWS_BRANCH} \
 		--capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND \
-		--no-confirm-changeset --no-fail-on-empty-changeset \
+		--no-fail-on-empty-changeset \
 		--parameter-overrides \
 			Stage=$${AWS_BRANCH} \
 			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn \
