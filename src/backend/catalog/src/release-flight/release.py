@@ -6,7 +6,7 @@ from botocore.exceptions import ClientError
 
 session = boto3.Session()
 dynamodb = session.resource('dynamodb')
-table = dynamodb.Table(os.environ['FLIGHT_TABLE_NAME'])
+table = dynamodb.Table(os.environ['SHOW_TABLE_NAME'])
 
 
 class FlightReservationException(Exception):

@@ -4,7 +4,7 @@
 ##########################
 
 AWS_BRANCH ?= "dev"
-FLIGHT_TABLE_NAME ?= "UNDEFINED"
+SHOW_TABLE_NAME ?= "UNDEFINED"
 STACK_NAME ?= "UNDEFINED"
 DEPLOYMENT_BUCKET_NAME ?= "UNDEFINED"
 GRAPHQL_API_ID ?= "UNDEFINED"
@@ -99,7 +99,7 @@ define HELP_MESSAGE
 
 	AWS_BRANCH: "dev"
 		Description: Feature branch name used as part of stacks name; added by Amplify Console by default
-	FLIGHT_TABLE_NAME: "Flight-hnxochcn4vfdbgp6zaopgcxk2a-xray"
+	SHOW_TABLE_NAME: "Flight-hnxochcn4vfdbgp6zaopgcxk2a-xray"
 		Description: Flight Table name created by Amplify for Catalog service
 	STACK_NAME: "awsserverlessairline-twitch-20190705130553"
 		Description: Stack Name already deployed; used for dirty/individual deployment

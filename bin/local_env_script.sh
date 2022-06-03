@@ -9,7 +9,7 @@ BOLD='\033[1;37m'
 
 function fetch_env_vars() {
     echo -e "[*] Fetching environment variables from Parameter Store in ${BOLD} region: ${AWS_DEFAULT_REGION}${NOCOLOR}"
-    FLIGHT_TABLE_NAME=$(aws ssm get-parameter --name /${AWS_BRANCH}/service/amplify/storage/table/flight --query 'Parameter.Value' --output text &)
+    SHOW_TABLE_NAME=$(aws ssm get-parameter --name /${AWS_BRANCH}/service/amplify/storage/table/flight --query 'Parameter.Value' --output text &)
     BOOKING_TABLE_NAME=$(aws ssm get-parameter --name /${AWS_BRANCH}/service/amplify/storage/table/booking --query 'Parameter.Value' --output text &)
     STACK_NAME=$(aws ssm get-parameter --name /${AWS_BRANCH}/service/amplify/deployment/stackName --query 'Parameter.Value' --output text &)
     DEPLOYMENT_BUCKET_NAME=$(aws ssm get-parameter --name /${AWS_BRANCH}/service/amplify/deployment/deploymentBucket --query 'Parameter.Value' --output text &)
@@ -21,7 +21,7 @@ function fetch_env_vars() {
 }
 
 function print_vars() {
-    ENV_VARS=(AWS_DEFAULT_REGION AWS_BRANCH FLIGHT_TABLE_NAME BOOKING_TABLE_NAME STACK_NAME DEPLOYMENT_BUCKET_NAME GRAPHQL_API_ID SHARED_LIBS_LAYER VUE_APP_StripePublicKey VUE_APP_PaymentChargeUrl)
+    ENV_VARS=(AWS_DEFAULT_REGION AWS_BRANCH SHOW_TABLE_NAME BOOKING_TABLE_NAME STACK_NAME DEPLOYMENT_BUCKET_NAME GRAPHQL_API_ID SHARED_LIBS_LAYER VUE_APP_StripePublicKey VUE_APP_PaymentChargeUrl)
 
     for env in ${ENV_VARS[@]}; do
         echo -e "${BOLD}export $env=${!env}${NOCOLOR}"

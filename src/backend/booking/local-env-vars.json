@@ -9,10 +9,10 @@
         "BOOKING_TABLE_NAME": "Booking-2pa2xn3qzzdi7ntbhdozirkmiy-twitch"
     },
     "ReserveFlightSeat": {
-        "FLIGHT_TABLE_NAME": "Flight-2pa2xn3qzzdi7ntbhdozirkmiy-twitch"
+        "SHOW_TABLE_NAME": "Flight-2pa2xn3qzzdi7ntbhdozirkmiy-twitch"
     },
     "ReleaseFlightSeat": {
-        "FLIGHT_TABLE_NAME": "Flight-2pa2xn3qzzdi7ntbhdozirkmiy-twitch"
+        "SHOW_TABLE_NAME": "Flight-2pa2xn3qzzdi7ntbhdozirkmiy-twitch"
     },
     "NotifyBooking": {
         "BOOKING_TOPIC": "arn:aws:sns:eu-west-1:231436140809:awsserverlessairline-20190506121509-booking-twitch-BookingTopic-1P885Y48O73LQ"

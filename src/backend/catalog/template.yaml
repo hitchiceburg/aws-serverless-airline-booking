@@ -20,7 +20,7 @@ Resources:
       Timeout: 10
       Environment:
         Variables:
-          FLIGHT_TABLE_NAME: !Ref FlightTable
+          SHOW_TABLE_NAME: !Ref FlightTable
 
   ReleaseFlight:
     Type: AWS::Serverless::Function
@@ -31,7 +31,7 @@ Resources:
       Timeout: 10
       Environment:
         Variables:
-          FLIGHT_TABLE_NAME: !Ref FlightTable
+          SHOW_TABLE_NAME: !Ref FlightTable
 
   ReserveFlightParameter:
     Type: "AWS::SSM::Parameter"
