@@ -62,6 +62,7 @@ deploy: ##=> Deploy booking service using SAM
 		--template-file packaged.yaml \
 		--stack-name $${STACK_NAME}-booking-$${AWS_BRANCH} \
 		--capabilities CAPABILITY_IAM \
+		--no-confirm-changeset --no-fail-on-empty-changeset \
 		--parameter-overrides \
 			BookingTable=/$${AWS_BRANCH}/service/amplify/storage/table/booking \
 			FlightTable=/$${AWS_BRANCH}/service/amplify/storage/table/flight \
@@ -70,7 +71,6 @@ deploy: ##=> Deploy booking service using SAM
 			AppsyncApiId=/$${AWS_BRANCH}/service/amplify/api/id \
 			Stage=$${AWS_BRANCH} \
 			SharedLibsLayer=/$${AWS_BRANCH}/shared/lambda/layers/projectArn \
-		--no-fail-on-empty-changeset
 
 delete: ##=> Delete booking service
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-booking-$${AWS_BRANCH}

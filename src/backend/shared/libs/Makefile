@@ -4,12 +4,12 @@ deploy: ##=> Deploy shared Lambda Layers using SAM
 	sam package \
 		--s3-bucket $${DEPLOYMENT_BUCKET_NAME} \
 		--output-template-file packaged.yaml && \
+		--no-confirm-changeset --no-fail-on-empty-changeset \
 	sam deploy \
 		--template-file packaged.yaml \
 		--stack-name $${STACK_NAME}-shared-layers-$${AWS_BRANCH} \
 		--parameter-overrides Stage=$${AWS_BRANCH} \
 		--capabilities CAPABILITY_IAM \
-		--no-fail-on-empty-changeset
 
 delete: ##=> Delete shared Lambda layers stack
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-shared-layers-$${AWS_BRANCH}
